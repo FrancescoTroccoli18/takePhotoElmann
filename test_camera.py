@@ -10,7 +10,7 @@ if "df" not in st.session_state:
     st.session_state.df = pd.DataFrame(columns=["image_bytes"])
 
 # URL pubblico della tua app
-url_pubblico = "https://tuo_url_pubblico"
+url_pubblico = "https://takephotoelmann-sgpeyampbwypzxwdjcj57s.streamlit.app/"
 
 # Genero il QR code
 qr = qrcode.QRCode(version=1, box_size=10, border=5)
@@ -41,3 +41,4 @@ if foto is not None:
     st.image(img, caption="Immagine salvata", use_column_width=True)
     st.success("Immagine salvata nel DataFrame!")
     st.write(st.session_state.df)
+
