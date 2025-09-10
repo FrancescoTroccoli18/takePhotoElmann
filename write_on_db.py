@@ -36,7 +36,7 @@ def insert_photo(token, codice_test, image, ut_ins):
     I campi ID e Dt_Ins vengono gestiti automaticamente da SQL Server.
     """
     query = """
-        INSERT INTO dbo.app_photo
+        INSERT INTO dbo.App_photo
             (Token, Codice_Test, Image, Ut_Ins)
         VALUES (?, ?, ?, ?)
     """
