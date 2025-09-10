@@ -2,5 +2,5 @@ streamlit
 pandas
 pillow
 qrcode
-base64
+pybase64
 pyodbc
