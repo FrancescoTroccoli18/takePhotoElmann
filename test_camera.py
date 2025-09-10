@@ -7,7 +7,7 @@ from write_on_db import *
 st.title("Acquisizione foto via QR")
 
 # Recupero i parametri dall'URL
-query_params = st.get_query_params()
+query_params = st.query_params()
 token = query_params.get("token", [None])[0]
 codice_test = query_params.get("test", [None])[0]
 current_user = query_params.get("ut", [None])[0]
