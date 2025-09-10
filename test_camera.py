@@ -40,7 +40,10 @@ else:
 
         # Pulsante per salvare
         if st.button("Conferma e Salva"):
-            insert_photo(token, codice_test, st.session_state.base64_img, current_user)
+            try:
+                insert_photo(token, codice_test, st.session_state.base64_img, current_user)
+            except Exception as e:
+                st.text(e)
             st.success("Salvata con successo!")
             # Resetta l'immagine dopo il salvataggio
             st.session_state.foto = None
