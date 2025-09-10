@@ -8,9 +8,9 @@ st.title("Acquisizione foto via QR")
 
 # Recupero i parametri dall'URL
 query_params = st.experimental_get_query_params
-token = query_params.get("token", [None])[0]
-codice_test = query_params.get("test", [None])[0]
-current_user = query_params.get("ut", [None])[0]
+token = query_params["token"][0] if "token" in query_params else None
+codice_test = query_params["test"][0] if "test" in query_params else None
+current_user = query_params["ut"][0] if "ut" in query_params else None
 
 if token is None or codice_test is None:
     st.error("Token o Codice Test non presenti nell'URL!")
